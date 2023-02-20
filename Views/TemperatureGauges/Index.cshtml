@@ -1,0 +1,187 @@
+﻿@model IEnumerable<Tenchex.Models.TemperatureGauge>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Kks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModelNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AreaClassification)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ElementMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProcessConnectionToThermowell)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProcessConnectionMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InsertionLength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmersionLength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TotalLength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WaveFrequencyCalculation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StemLength)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StemDiameter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpanRange)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SensorType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Accuracy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Repeatabilty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Standard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThermowellType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThermowellProcessConnection)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThermowellProcessConnectionMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CaseMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DialSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CaseFilling)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GlassType)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModelNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AreaClassification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ElementMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcessConnectionToThermowell)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcessConnectionMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InsertionLength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmersionLength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalLength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WaveFrequencyCalculation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StemLength)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StemDiameter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpanRange)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SensorType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Accuracy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Repeatabilty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Standard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThermowellType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThermowellProcessConnection)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThermowellProcessConnectionMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaseMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DialSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaseFilling)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GlassType)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TemperatureGaugeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TemperatureGaugeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TemperatureGaugeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

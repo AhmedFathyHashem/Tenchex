@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Tenchex.Models.Projects>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<div class="container row">
+	@foreach (var item in Model)
+	{
+		<div class="col-4">
+			<h1>@Html.DisplayFor(modelItem => item.ProjectName)</h1>
+			<div class="Card" style="border:2px solid black; border-radius:25px">
+				<div class="card-body">
+					<h4 class="card-title">@Html.DisplayFor(modelItem => item.ProjectType)</h4>
+					<h3 class="card-text">@Html.DisplayFor(modelItem => item.ProjectOwner)</h3>
+					<a asp-controller="Systems" asp-action="Select" asp-route-id="@item.ProjectId" class="btn btn-primary">Select</a>
+					<a asp-action="Edit" asp-route-id="@item.ProjectId" class="btn btn-primary">Edit</a> |
+					<a asp-action="Details" asp-route-id="@item.ProjectId" class="btn btn-primary">Details</a> |
+					<a asp-action="Delete" asp-route-id="@item.ProjectId" class="btn btn-danger">Delete</a>
+				</div>
+			</div>
+		</div>
+	}
+</div>

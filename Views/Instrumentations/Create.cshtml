@@ -1,0 +1,57 @@
+﻿@model Tenchex.Models.Instrumentations
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Instrumentations</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="InstrumentType" class="control-label"></label>
+                <select asp-for="InstrumentType" class="form-control"></select>
+                <span asp-validation-for="InstrumentType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PressureGaugeId" class="control-label"></label>
+                <select asp-for="PressureGaugeId" class ="form-control" asp-items="ViewBag.PressureGaugeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PressureTransmitterId" class="control-label"></label>
+                <select asp-for="PressureTransmitterId" class ="form-control" asp-items="ViewBag.PressureTransmitterId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiffrentialPressureGaugeId" class="control-label"></label>
+                <select asp-for="DiffrentialPressureGaugeId" class ="form-control" asp-items="ViewBag.DiffrentialPressureGaugeId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiffrentialPressureTransmitterId" class="control-label"></label>
+                <select asp-for="DiffrentialPressureTransmitterId" class ="form-control" asp-items="ViewBag.DiffrentialPressureTransmitterId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TemperatureTransmitterId" class="control-label"></label>
+                <select asp-for="TemperatureTransmitterId" class ="form-control" asp-items="ViewBag.TemperatureTransmitterId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="TemperatureGaugeId" class="control-label"></label>
+                <select asp-for="TemperatureGaugeId" class ="form-control" asp-items="ViewBag.TemperatureGaugeId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Tenchex.Models.Instrumentations>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.InstrumentType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PressureGauge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PressureTransmitter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiffrentialPressureGauge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiffrentialPressureTransmitter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TemperatureGauge)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TemperatureTransmitter)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.InstrumentType)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PressureGaugeId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PressureTransmitterId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiffrentialPressureGaugeId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DiffrentialPressureTransmitterId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TemperatureGaugeId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TemperatureTransmitterId)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.InstrumentationId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.InstrumentationId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.InstrumentationId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

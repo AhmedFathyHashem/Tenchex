@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Tenchex.Models.Equipments>
+
+@{
+	ViewData["Title"] = "SelectEquipment";
+}
+
+<h1>View</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<div class="container row">
+	@foreach (var item in Enum.GetNames(typeof(EquipmentType)))
+	{
+		<div class="col-6">
+			<div class="Card" style="border:2px solid black; border-radius:25px">
+				<div class="card-body">
+					<h4 class="card-title">@Html.DisplayName(item)</h4>
+					<a asp-controller="Equipments" asp-action="SelectEquip" asp-route-id="@item" class="btn btn-primary">Select</a>
+				</div>
+			</div>
+		</div>
+	}
+</div>
+

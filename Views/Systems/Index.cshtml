@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Tenchex.Models.Systems>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+@*<h1>@Html.DisplayNameFor(from p in Model. where )</h1>*@
+
+<p>
+	<a asp-action="Create" class="btn btn-success">Create New</a>
+</p>
+<div class="container row">
+	@foreach (var item in Model)
+	{
+		<div class="col-4">
+			<div class="Card" style="border:2px solid black; border-radius:25px">
+				<div class="card-body">
+					<h4 class="card-title">@Html.DisplayFor(modelItem => item.SystemName)</h4>
+					<h3 class="card-text">@Html.DisplayFor(modelItem => item.SystemFluid)</h3>
+					<a asp-controller="Equipments" asp-action="Select" asp-route-id="@item.SystemId" class="btn btn-primary">Select</a>
+					<a asp-action="Delete" asp-route-id="@item.SystemId" class="btn btn-danger">Delete</a>
+				</div>
+			</div>
+		</div>
+	}
+</div>
+<div>
+	<a asp-controller="Projects" asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,167 @@
+﻿@model Tenchex.Models.DiffrentialPressureGauge
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create</title>
+</head>
+<body>
+
+<h4>DiffrentialPressureGauge</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Kks" class="control-label"></label>
+                <input asp-for="Kks" class="form-control" />
+                <span asp-validation-for="Kks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModelNumber" class="control-label"></label>
+                <input asp-for="ModelNumber" class="form-control" />
+                <span asp-validation-for="ModelNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AreaClassification" class="control-label"></label>
+                <input asp-for="AreaClassification" class="form-control" />
+                <span asp-validation-for="AreaClassification" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ip" class="control-label"></label>
+                <input asp-for="Ip" class="form-control" />
+                <span asp-validation-for="Ip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ElementMaterial" class="control-label"></label>
+                <input asp-for="ElementMaterial" class="form-control" />
+                <span asp-validation-for="ElementMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProcessConnectionMaterial" class="control-label"></label>
+                <input asp-for="ProcessConnectionMaterial" class="form-control" />
+                <span asp-validation-for="ProcessConnectionMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SpanRange" class="control-label"></label>
+                <input asp-for="SpanRange" class="form-control" />
+                <span asp-validation-for="SpanRange" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Accuracy" class="control-label"></label>
+                <input asp-for="Accuracy" class="form-control" />
+                <span asp-validation-for="Accuracy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Repeatabilty" class="control-label"></label>
+                <input asp-for="Repeatabilty" class="form-control" />
+                <span asp-validation-for="Repeatabilty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Standard" class="control-label"></label>
+                <input asp-for="Standard" class="form-control" />
+                <span asp-validation-for="Standard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MountingBracket" class="control-label"></label>
+                <input asp-for="MountingBracket" class="form-control" />
+                <span asp-validation-for="MountingBracket" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MountingBracketMaterial" class="control-label"></label>
+                <input asp-for="MountingBracketMaterial" class="form-control" />
+                <span asp-validation-for="MountingBracketMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CaseMaterial" class="control-label"></label>
+                <input asp-for="CaseMaterial" class="form-control" />
+                <span asp-validation-for="CaseMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DialSize" class="control-label"></label>
+                <input asp-for="DialSize" class="form-control" />
+                <span asp-validation-for="DialSize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CaseFilling" class="control-label"></label>
+                <input asp-for="CaseFilling" class="form-control" />
+                <span asp-validation-for="CaseFilling" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GlassType" class="control-label"></label>
+                <input asp-for="GlassType" class="form-control" />
+                <span asp-validation-for="GlassType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OverPressureProtector" class="control-label"></label>
+                <input asp-for="OverPressureProtector" class="form-control" />
+                <span asp-validation-for="OverPressureProtector" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BlowOutProtection" class="control-label"></label>
+                <input asp-for="BlowOutProtection" class="form-control" />
+                <span asp-validation-for="BlowOutProtection" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Siphone" class="control-label"></label>
+                <input asp-for="Siphone" class="form-control" />
+                <span asp-validation-for="Siphone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Manifold" class="control-label"></label>
+                <input asp-for="Manifold" class="form-control" />
+                <span asp-validation-for="Manifold" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManifoldType" class="control-label"></label>
+                <input asp-for="ManifoldType" class="form-control" />
+                <span asp-validation-for="ManifoldType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManifoldMaterial" class="control-label"></label>
+                <input asp-for="ManifoldMaterial" class="form-control" />
+                <span asp-validation-for="ManifoldMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiaphragmSeal" class="control-label"></label>
+                <input asp-for="DiaphragmSeal" class="form-control" />
+                <span asp-validation-for="DiaphragmSeal" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiaphragmSealMaterial" class="control-label"></label>
+                <input asp-for="DiaphragmSealMaterial" class="form-control" />
+                <span asp-validation-for="DiaphragmSealMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CabillaryTubes" class="control-label"></label>
+                <input asp-for="CabillaryTubes" class="form-control" />
+                <span asp-validation-for="CabillaryTubes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CabillaryTubesMaterial" class="control-label"></label>
+                <input asp-for="CabillaryTubesMaterial" class="form-control" />
+                <span asp-validation-for="CabillaryTubesMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+</body>
+</html>

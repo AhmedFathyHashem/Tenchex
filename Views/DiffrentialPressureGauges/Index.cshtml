@@ -1,0 +1,193 @@
+﻿@model IEnumerable<Tenchex.Models.DiffrentialPressureGauge>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Kks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModelNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AreaClassification)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ElementMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProcessConnectionMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpanRange)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Accuracy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Repeatabilty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Standard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MountingBracket)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MountingBracketMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CaseMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DialSize)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CaseFilling)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GlassType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OverPressureProtector)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BlowOutProtection)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Siphone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Manifold)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ManifoldType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ManifoldMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiaphragmSeal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiaphragmSealMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CabillaryTubes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CabillaryTubesMaterial)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModelNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AreaClassification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ElementMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcessConnectionMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpanRange)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Accuracy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Repeatabilty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Standard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MountingBracket)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MountingBracketMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaseMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DialSize)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaseFilling)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GlassType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OverPressureProtector)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlowOutProtection)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Siphone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manifold)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManifoldType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManifoldMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaphragmSeal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaphragmSealMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CabillaryTubes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CabillaryTubesMaterial)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DiffrentialPressureGaugeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DiffrentialPressureGaugeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DiffrentialPressureGaugeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

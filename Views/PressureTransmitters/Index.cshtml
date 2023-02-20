@@ -1,0 +1,199 @@
+﻿@model IEnumerable<Tenchex.Models.PressureTransmitter>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Kks)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModelNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AreaClassification)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ip)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ElementMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HousingMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProcessConnectionMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SpanRange)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CallibrationRange)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SensorType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Accuracy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Repeatabilty)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Standard)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lcd)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.KeyPad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Protocol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model._420mA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Installation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MountingBracket)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MountingBracketMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Manifold)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ManifoldType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ManifoldMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiaphragmSeal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DiaphragmSealMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CabillaryTubes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CabillaryTubesMaterial)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kks)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModelNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AreaClassification)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ip)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ElementMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HousingMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProcessConnectionMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SpanRange)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CallibrationRange)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SensorType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Accuracy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Repeatabilty)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Standard)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lcd)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KeyPad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Protocol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item._420mA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Installation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MountingBracket)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MountingBracketMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manifold)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManifoldType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManifoldMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaphragmSeal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaphragmSealMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CabillaryTubes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CabillaryTubesMaterial)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PressureTransmitterId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PressureTransmitterId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PressureTransmitterId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

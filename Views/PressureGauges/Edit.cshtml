@@ -1,0 +1,153 @@
+﻿@model Tenchex.Models.PressureGauge
+
+<h4>PressureGauge</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PressureGaugeId" />
+            <div class="form-group">
+                <label asp-for="Kks" class="control-label"></label>
+                <input asp-for="Kks" class="form-control" />
+                <span asp-validation-for="Kks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModelNumber" class="control-label"></label>
+                <input asp-for="ModelNumber" class="form-control" />
+                <span asp-validation-for="ModelNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AreaClassification" class="control-label"></label>
+                <input asp-for="AreaClassification" class="form-control" />
+                <span asp-validation-for="AreaClassification" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ip" class="control-label"></label>
+                <input asp-for="Ip" class="form-control" />
+                <span asp-validation-for="Ip" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ElementMaterial" class="control-label"></label>
+                <input asp-for="ElementMaterial" class="form-control" />
+                <span asp-validation-for="ElementMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProcessConnectionMaterial" class="control-label"></label>
+                <input asp-for="ProcessConnectionMaterial" class="form-control" />
+                <span asp-validation-for="ProcessConnectionMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SpanRange" class="control-label"></label>
+                <input asp-for="SpanRange" class="form-control" />
+                <span asp-validation-for="SpanRange" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Accuracy" class="control-label"></label>
+                <input asp-for="Accuracy" class="form-control" />
+                <span asp-validation-for="Accuracy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Repeatabilty" class="control-label"></label>
+                <input asp-for="Repeatabilty" class="form-control" />
+                <span asp-validation-for="Repeatabilty" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Standard" class="control-label"></label>
+                <input asp-for="Standard" class="form-control" />
+                <span asp-validation-for="Standard" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="MountingBracket" /> @Html.DisplayNameFor(model => model.MountingBracket)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="MountingBracketMaterial" class="control-label"></label>
+                <input asp-for="MountingBracketMaterial" class="form-control" />
+                <span asp-validation-for="MountingBracketMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CaseMaterial" class="control-label"></label>
+                <input asp-for="CaseMaterial" class="form-control" />
+                <span asp-validation-for="CaseMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DialSize" class="control-label"></label>
+                <input asp-for="DialSize" class="form-control" />
+                <span asp-validation-for="DialSize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CaseFilling" class="control-label"></label>
+                <input asp-for="CaseFilling" class="form-control" />
+                <span asp-validation-for="CaseFilling" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GlassType" class="control-label"></label>
+                <input asp-for="GlassType" class="form-control" />
+                <span asp-validation-for="GlassType" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="OverPressureProtector" /> @Html.DisplayNameFor(model => model.OverPressureProtector)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="BlowOutProtection" /> @Html.DisplayNameFor(model => model.BlowOutProtection)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Siphone" /> @Html.DisplayNameFor(model => model.Siphone)
+                </label>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Manifold" /> @Html.DisplayNameFor(model => model.Manifold)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManifoldType" class="control-label"></label>
+                <input asp-for="ManifoldType" class="form-control" />
+                <span asp-validation-for="ManifoldType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ManifoldMaterial" class="control-label"></label>
+                <input asp-for="ManifoldMaterial" class="form-control" />
+                <span asp-validation-for="ManifoldMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="DiaphragmSeal" /> @Html.DisplayNameFor(model => model.DiaphragmSeal)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="DiaphragmSealMaterial" class="control-label"></label>
+                <input asp-for="DiaphragmSealMaterial" class="form-control" />
+                <span asp-validation-for="DiaphragmSealMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="CabillaryTubes" /> @Html.DisplayNameFor(model => model.CabillaryTubes)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="CabillaryTubesMaterial" class="control-label"></label>
+                <input asp-for="CabillaryTubesMaterial" class="form-control" />
+                <span asp-validation-for="CabillaryTubesMaterial" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

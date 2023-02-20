@@ -1,0 +1,24 @@
+﻿@model IEnumerable<Tenchex.Models.InstrumentType>
+
+@{
+    ViewData["Title"] = "Send";
+}
+
+<h1>Send</h1>
+
+
+<div class="container row">
+	@foreach (var item in Enum.GetNames(typeof(InstrumentType)))
+	{
+		<div class="col-6">
+			<div class="Card" style="border:2px solid black; border-radius:25px">
+			<div class="card-body">
+						<h4 class="card-title">@Html.DisplayName(item)</h4>
+					<a asp-controller="Instrumentations" asp-action="Select" asp-route-id="@item" class="btn btn-primary">Select</a>
+				</div>
+			</div>
+		</div>
+	}
+</div>
+
+

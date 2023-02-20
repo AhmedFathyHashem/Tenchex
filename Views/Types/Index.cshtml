@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Tenchex.Models.Types>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.InstrumentId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CableId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PipeId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CompressorId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TankId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PumpId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValveId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstrumentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CableId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PipeId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CompressorId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TankId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PumpId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ValveId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TypeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TypeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TypeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

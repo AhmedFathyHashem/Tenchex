@@ -1,0 +1,63 @@
+﻿@model Tenchex.Models.Equipments
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Equipments</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Type" class="control-label"></label>
+                <select asp-for="Type" class="form-control" asp-items="ViewBag.EquipmentType"></select>
+                <span asp-validation-for="Type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="UnitePrice" class="control-label"></label>
+                <input asp-for="UnitePrice" class="form-control" />
+                <span asp-validation-for="UnitePrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Currency" class="control-label"></label>
+                <select asp-for="Currency" class="form-control" asp-items="ViewBag.EquipmentCurrency"></select>
+                <span asp-validation-for="Currency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Quantities" class="control-label"></label>
+                <input asp-for="Quantities" class="form-control" />
+                <span asp-validation-for="Quantities" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="VendorID" class="control-label"></label>
+                <select asp-for="VendorID" class="form-control" asp-items="ViewBag.Vendors"></select>
+                <span asp-validation-for="VendorID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SupplierId" class="control-label"></label>
+                <select asp-for="SupplierId" class="form-control" asp-items="ViewBag.Suppliers"></select>
+                <span asp-validation-for="SupplierId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmployeeId" class="control-label"></label>
+                <Select asp-for="EmployeeId" class="form-control" asp-items="ViewBag.Employee"></Select>
+                <span asp-validation-for="EmployeeId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary"  />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
